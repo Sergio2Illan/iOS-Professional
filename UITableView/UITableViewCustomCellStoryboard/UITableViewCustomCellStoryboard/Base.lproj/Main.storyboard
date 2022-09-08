@@ -20,13 +20,49 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="d9E-rY-YMf">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="150" id="d9E-rY-YMf" customClass="CustomTableViewCell" customModule="UITableViewCustomCellStoryboard" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="d9E-rY-YMf" id="MRG-r3-9KN">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pCh-Vy-xtg">
+                                                    <rect key="frame" x="184" y="19" width="210" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0vB-Ae-tfF">
+                                                    <rect key="frame" x="186" y="59" width="208" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yck-fT-qvE">
+                                                    <rect key="frame" x="20" y="7" width="148" height="136"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="148" id="bws-5g-n75"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="pCh-Vy-xtg" firstAttribute="leading" secondItem="yck-fT-qvE" secondAttribute="trailing" constant="16" id="38w-IS-x60"/>
+                                                <constraint firstItem="0vB-Ae-tfF" firstAttribute="top" secondItem="pCh-Vy-xtg" secondAttribute="bottom" constant="19" id="9yz-Qz-Hi8"/>
+                                                <constraint firstItem="yck-fT-qvE" firstAttribute="leading" secondItem="MRG-r3-9KN" secondAttribute="leadingMargin" id="Bco-I5-tpd"/>
+                                                <constraint firstItem="yck-fT-qvE" firstAttribute="centerY" secondItem="MRG-r3-9KN" secondAttribute="centerY" id="ByZ-O5-3PB"/>
+                                                <constraint firstItem="0vB-Ae-tfF" firstAttribute="leading" secondItem="yck-fT-qvE" secondAttribute="trailing" constant="18" id="Jzi-Pt-iLe"/>
+                                                <constraint firstItem="pCh-Vy-xtg" firstAttribute="top" secondItem="MRG-r3-9KN" secondAttribute="topMargin" constant="8" id="MiE-HK-vkr"/>
+                                                <constraint firstItem="pCh-Vy-xtg" firstAttribute="trailing" secondItem="MRG-r3-9KN" secondAttribute="trailingMargin" id="p8E-yg-DAs"/>
+                                                <constraint firstItem="yck-fT-qvE" firstAttribute="top" secondItem="MRG-r3-9KN" secondAttribute="topMargin" constant="-4" id="xCR-l9-v4Q"/>
+                                                <constraint firstItem="pCh-Vy-xtg" firstAttribute="trailing" secondItem="0vB-Ae-tfF" secondAttribute="trailing" id="ztW-5A-8zm"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dataCity" destination="0vB-Ae-tfF" id="3FO-AB-qSp"/>
+                                            <outlet property="dataImage" destination="yck-fT-qvE" id="2fI-RB-ubK"/>
+                                            <outlet property="dataName" destination="pCh-Vy-xtg" id="N4m-vT-V6g"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
