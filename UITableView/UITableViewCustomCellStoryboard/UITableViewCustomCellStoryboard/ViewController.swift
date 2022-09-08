@@ -42,7 +42,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Se pulsa la celda \(dataName[indexPath.row]) que se encuentra en \(dataCity[indexPath.row])")
+        showAlert(title: "Aviso", message: "Se pulsa la celda \(dataName[indexPath.row]) que se encuentra en \(dataCity[indexPath.row])", view: self)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
