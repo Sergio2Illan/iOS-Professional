@@ -8,12 +8,14 @@
 import UIKit
 import WebKit
 
-class DetailController: UIViewController, WKNavigationDelegate {
+class DetailController: UIViewController, WKNavigationDelegate, CoordinatorDelegate {
 
-    @IBOutlet private weak var web: WKWebView!
+    @IBOutlet  weak var web: WKWebView!
 
-    @IBOutlet weak var activity: UIActivityIndicatorView!
+    @IBOutlet private weak var activity: UIActivityIndicatorView!
+    
     var contenidoWeb: String?
+    var delegate: MainCoordinator?
     
     override func viewDidLoad() {
         super.viewDidLoad()

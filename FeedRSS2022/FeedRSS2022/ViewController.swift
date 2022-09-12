@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, XMLParserDelegate {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, XMLParserDelegate, CoordinatorDelegate {
     
     
 
@@ -18,6 +18,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     private var titulo = String()
     private var link = String()
     private var nombre = String()
+    var delegate: MainCoordinator?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -90,11 +91,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return posts.count
     }
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        let detail = storyboard?.instantiateViewController(withIdentifier: "DetailView") as! DetailController
 //        detail.contenidoWeb = posts[indexPath.row].link
 //        present(detail, animated: true)
-//    }
+        
+        delegate?.goToDetailView(data: posts[indexPath.row].link)
+    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
@@ -106,15 +109,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "detailView" {
-            print("dddd")
-            guard let selectedCell = tableView.indexPathForSelectedRow?.row else {return}
-            let position = posts[selectedCell]
-            let detalle = segue.destination as! DetailController
-            detalle.contenidoWeb = position.link
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "detailView" {
+//            print("dddd")
+//            guard let selectedCell = tableView.indexPathForSelectedRow?.row else {return}
+//            let position = posts[selectedCell]
+//            let detalle = segue.destination as! DetailController
+//            detalle.contenidoWeb = position.link
+//        }
+//    }
 
 }
 

@@ -11,7 +11,7 @@
         <!--Últimos Feeds-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="TableView" id="BYZ-38-t0r" customClass="ViewController" customModule="FeedRSS2022" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="FeedRSS2022" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -55,7 +55,7 @@
         <!--Detail Controller-->
         <scene sceneID="yK6-GI-xnX">
             <objects>
-                <viewController storyboardIdentifier="DetailView" id="f45-qb-D7l" customClass="DetailController" customModule="FeedRSS2022" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailController" id="f45-qb-D7l" customClass="DetailController" customModule="FeedRSS2022" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1rG-eH-1m7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
